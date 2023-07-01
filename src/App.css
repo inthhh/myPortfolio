@@ -60,10 +60,7 @@ a {
   width: 500px;
   height: 500px;
   position: relative;
-  top: 50%;
-  margin-top: -200px;
-  margin-left: 5px;
-  margin-right: 5px;
+  margin-top: 200px;
 }
 .swiper-wrapper .swiper-slide .inner {
   width: 100%;
