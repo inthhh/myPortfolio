@@ -1,6 +1,12 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
+import MainSwiper from "./MainSwipers/MainSwiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Scrollbar } from "swiper";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
 
 function App() {
   return (
@@ -18,6 +24,26 @@ function App() {
           <i className="fas fa-pause"></i>
         </li>
       </ul>
+      <div className="swiper-wrapper">
+        <div className="swiper-slide">
+          <div className="inner"></div>
+        </div>
+        <div className="swiper-slide">
+          <div className="inner"></div>
+        </div>
+        <div className="swiper-slide">
+          <div className="inner"></div>
+        </div>
+        <div className="swiper-slide">
+          <div className="inner"></div>
+        </div>
+        <div className="swiper-slide">
+          <div className="inner"></div>
+        </div>
+      </div>
+      <div className="swiper-button-next"></div>
+      <div className="swiper-button-prev"></div>
+      <div className="swiper-pagination"></div>
     </div>
   );
 }
