@@ -1,24 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="wrap">
+      <h1>
+        안녕하세요! 😊
+        <br /> 디자인을 사랑하는 <span>프론트엔드 개발자 지망생</span>
+        <br /> 정수현입니다.
+      </h1>
+      <ul className="auto">
+        <li className="btnStart">
+          <i className="fas fa-play"></i>
+        </li>
+        <li className="btnStop">
+          <i className="fas fa-pause"></i>
+        </li>
+      </ul>
     </div>
   );
 }
