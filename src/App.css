@@ -43,7 +43,7 @@ a {
   letter-spacing: 1px;
   position: absolute;
   left: 50px;
-  top: 70px;
+  top: 50px;
 }
 
 .wrap h1 span {
@@ -60,7 +60,7 @@ a {
   width: 500px;
   height: 500px;
   position: relative;
-  margin-top: 200px;
+  margin-top: 190px;
 }
 .swiper-wrapper .swiper-slide .inner {
   width: 100%;
@@ -70,4 +70,39 @@ a {
   box-sizing: border-box;
   opacity: 0.4;
   transition: 1s;
+}
+
+.wrap .swiper-button-prev {
+  right: 100px;
+  bottom: 50px;
+  left: auto;
+  top: auto;
+  filter: grayscale(100%) brightness(3);
+  transform: scale(0.5);
+}
+
+.wrap .swiper-button-next {
+  right: 60px;
+  bottom: 50px;
+  left: auto;
+  top: auto;
+  filter: grayscale(100%) brightness(3);
+  transform: scale(0.5);
+}
+
+.wrap .swiper-pagination-fraction {
+  bottom: auto;
+  top: 50px;
+  left: auto;
+  right: 50px;
+  width: auto;
+  font-size: 20px;
+  font-family: "orbitron";
+  letter-spacing: 1px;
+  color: #eee;
+}
+
+.wrap .swiper-pagination-fraction span:nth-of-type(1) {
+  font-size: 30px;
+  color: #fff;
 }

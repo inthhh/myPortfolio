@@ -14,28 +14,22 @@ function App() {
   useEffect(() => {
     if (swiperContainerRef.current) {
       const swiper = new Swiper(swiperContainerRef.current, {
-        slidesPerView: 3, // 한 번에 보여줄 슬라이드 개수 설정
+        pagination: {
+          el: ".swiper-pagination",
+          type: "fraction",
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        slidesPerView: 2.5, // 한 번에 보여줄 슬라이드 개수 설정
         spaceBetween: 15, // 슬라이드 간의 간격 설정
-        loop: true,
+        // loop: true,
         centeredSlides: true,
+        speed: 1000,
+        direction: "horizontal",
         // Swiper 옵션 설정
       });
-
-      // swiper-button-next 클릭 시 이벤트 처리
-      const nextButton = document.querySelector(".swiper-button-next");
-      if (nextButton) {
-        nextButton.addEventListener("click", () => {
-          swiper.slideNext(); // 다음 슬라이드로 이동
-        });
-      }
-
-      // swiper-button-prev 클릭 시 이벤트 처리
-      const prevButton = document.querySelector(".swiper-button-prev");
-      if (prevButton) {
-        prevButton.addEventListener("click", () => {
-          swiper.slidePrev(); // 이전 슬라이드로 이동
-        });
-      }
     }
   }, []);
 
