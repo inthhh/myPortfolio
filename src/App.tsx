@@ -1,13 +1,19 @@
 import React, { useEffect, useState, useRef } from "react";
 import "./App.css";
-import SwiperCore, { Navigation, Pagination, Scrollbar } from "swiper";
+import SwiperCore, { Navigation, Pagination, Scrollbar, EffectCoverflow } from "swiper";
 import { Swiper } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
+import "swiper/css/effect-coverflow";
+import "swiper/css/effect-cards";
+import "swiper/css/effect-creative";
+import "swiper/css/effect-cube";
+import "swiper/css/effect-fade";
+import "swiper/css/effect-flip";
 
-SwiperCore.use([Navigation, Pagination, Scrollbar]);
+SwiperCore.use([Navigation, Pagination, Scrollbar, EffectCoverflow]);
 
 function App() {
   const swiperContainerRef = useRef<HTMLDivElement>(null);
@@ -22,13 +28,22 @@ function App() {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
         },
-        slidesPerView: 2.5, // 한 번에 보여줄 슬라이드 개수 설정
+        slidesPerView: "auto", // 한 번에 보여줄 슬라이드 개수 설정
         spaceBetween: 15, // 슬라이드 간의 간격 설정
         // loop: true,
         centeredSlides: true,
         speed: 1000,
         direction: "horizontal",
+        grabCursor: true,
         // Swiper 옵션 설정
+        effect: "coverflow",
+        coverflowEffect: {
+          rotate: 50,
+          stretch: -100,
+          depth: 400,
+          modifier: 1,
+          slideShadows: false,
+        },
       });
     }
   }, []);
