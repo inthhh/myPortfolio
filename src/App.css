@@ -51,13 +51,13 @@ a {
   font-weight: bold;
 }
 
-.wrap .swiper-wrapper .swiper-slide-active .inner {
+.wrap .swiper-wrapper .swiper-slide-active {
   opacity: 1;
   box-shadow: 0px 0px 50px rgb(255, 255, 128);
 }
 
-.wrap .swiper-wrapper .swiper-slide .inner::before,
-.wrap .swiper-wrapper .swiper-slide .inner::after {
+.wrap .swiper-wrapper .swiper-slide::before,
+.wrap .swiper-wrapper .swiper-slide::after {
   content: "";
   display: block;
   width: 100%;
@@ -81,13 +81,13 @@ a {
     transform: scale(1.3);
   }
 }
-.wrap .swiper-wrapper .swiper-slide-active .inner::before {
+.wrap .swiper-wrapper .swiper-slide-active::before {
   animation: ani 1s ease 1;
 }
 
-.wrap .swiper-wrapper .swiper-slide-prev .inner,
-.wrap .swiper-wrapper .swiper-slide-next .inner {
-  opacity: 0.7;
+.wrap .swiper-wrapper .swiper-slide-prev,
+.wrap .swiper-wrapper .swiper-slide-next {
+  opacity: 0.6;
 }
 
 .swiper-wrapper {
@@ -101,30 +101,49 @@ a {
   border-radius: 12px;
   position: relative;
   margin-top: 190px;
+  background: #fff;
 }
 .swiper-wrapper .swiper-slide .inner {
   width: 100%;
   height: 100%;
-  background: #fff;
   border-radius: 12px;
   padding: 30px;
   box-sizing: border-box;
-  opacity: 0.4;
+  background-color: #fff;
+  /* opacity: 1; */
   transition: 1s;
   display: flex;
   align-items: center; /* 수직 방향 중앙 정렬 */
+  z-index: 10;
 }
-.swiper-wrapper .swiper-slide img {
+
+.swiper-wrapper .swiper-slide .inner img {
   width: 320px;
   border-radius: 12px;
 }
-.swiper-wrapper .swiper-slide p {
+.swiper-wrapper .swiper-slide .inner .text-box {
+  margin-left: 20px;
+}
+.swiper-wrapper .swiper-slide .inner .arrow {
+  margin-top: 10px;
+  width: 30px;
+  height: 0.5px;
+  background-color: black;
+}
+.swiper-wrapper .swiper-slide-active .inner .arrow {
+  margin-top: 10px;
+  width: 130px;
+  height: 0.5px;
+  background-color: black;
+  transition: 1s 0.5s;
+}
+
+.swiper-wrapper .swiper-slide .inner p {
   font-size: 25px;
   font-family: "roboto";
   color: #000;
-  margin-left: 20px;
 }
-.swiper-wrapper .swiper-slide p span {
+.swiper-wrapper .swiper-slide .inner p span {
   font-weight: bolder;
 }
 
@@ -161,4 +180,11 @@ a {
 .wrap .swiper-pagination-fraction span:nth-of-type(1) {
   font-size: 30px;
   color: #fff;
+}
+
+.swiper-wrapper .swiper-slide:hover .inner {
+  transform: scale(0.9);
+}
+.swiper-wrapper .swiper-slide:hover {
+  cursor: pointer;
 }

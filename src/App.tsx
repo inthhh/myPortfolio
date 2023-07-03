@@ -12,6 +12,8 @@ import MybirthdayImg from "./imgs/mybirthday.jpeg";
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, EffectCoverflow]);
 
+const MoveToFirst = () => {};
+
 function App() {
   const swiperContainerRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
@@ -31,7 +33,7 @@ function App() {
         centeredSlides: true,
         speed: 1000,
         direction: "horizontal",
-        grabCursor: true,
+        grabCursor: false,
         // Swiper 옵션 설정
         effect: "coverflow",
         coverflowEffect: {
@@ -62,30 +64,38 @@ function App() {
       </ul>
       <div className="swiper-wrapper">
         <div className="swiper-slide">
-          <div className="inner">
+          <div className="inner" onClick={MoveToFirst}>
             <h1>1</h1>
             <img src={MybirthdayImg} />
-            <p>About My Life</p>
+            <div className="text-box">
+              <p>About My Life</p>
+              <div className="arrow"></div>
+              <p style={{ fontSize: "14px", marginTop: "14px" }}>더보기</p>
+            </div>
           </div>
         </div>
         <div className="swiper-slide">
           <div className="inner">
             <h1>2</h1>
+            <p>About My Life 2</p>
           </div>
         </div>
         <div className="swiper-slide">
           <div className="inner">
             <h1>3</h1>
+            <p>About My Life 3</p>
           </div>
         </div>
         <div className="swiper-slide">
           <div className="inner">
             <h1>4</h1>
+            <p>About My Life 4</p>
           </div>
         </div>
         <div className="swiper-slide">
           <div className="inner">
             <h1>5</h1>
+            <p>About My Life 5</p>
           </div>
         </div>
       </div>
