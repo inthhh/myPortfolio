@@ -7,11 +7,8 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import "swiper/css/effect-coverflow";
-import "swiper/css/effect-cards";
-import "swiper/css/effect-creative";
-import "swiper/css/effect-cube";
-import "swiper/css/effect-fade";
-import "swiper/css/effect-flip";
+
+import MybirthdayImg from "./imgs/mybirthday.jpeg";
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, EffectCoverflow]);
 
@@ -67,6 +64,8 @@ function App() {
         <div className="swiper-slide">
           <div className="inner">
             <h1>1</h1>
+            <img src={MybirthdayImg} />
+            <p>About My Life</p>
           </div>
         </div>
         <div className="swiper-slide">

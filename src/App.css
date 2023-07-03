@@ -47,7 +47,7 @@ a {
 }
 
 .wrap h1 span {
-  opacity: 0.8;
+  opacity: 0.9;
   font-weight: bold;
 }
 
@@ -84,9 +84,6 @@ a {
 .wrap .swiper-wrapper .swiper-slide-active .inner::before {
   animation: ani 1s ease 1;
 }
-.wrap .swiper-wrapper .swiper-slide-active .inner::after {
-  animation: ani 1s ease 0.3s 1;
-}
 
 .wrap .swiper-wrapper .swiper-slide-prev .inner,
 .wrap .swiper-wrapper .swiper-slide-next .inner {
@@ -99,8 +96,9 @@ a {
 }
 
 .swiper-wrapper .swiper-slide {
-  width: 450px;
+  width: 600px;
   height: 500px;
+  border-radius: 12px;
   position: relative;
   margin-top: 190px;
 }
@@ -108,10 +106,26 @@ a {
   width: 100%;
   height: 100%;
   background: #fff;
+  border-radius: 12px;
   padding: 30px;
   box-sizing: border-box;
   opacity: 0.4;
   transition: 1s;
+  display: flex;
+  align-items: center; /* 수직 방향 중앙 정렬 */
+}
+.swiper-wrapper .swiper-slide img {
+  width: 320px;
+  border-radius: 12px;
+}
+.swiper-wrapper .swiper-slide p {
+  font-size: 25px;
+  font-family: "roboto";
+  color: #000;
+  margin-left: 20px;
+}
+.swiper-wrapper .swiper-slide p span {
+  font-weight: bolder;
 }
 
 .wrap .swiper-button-prev {
