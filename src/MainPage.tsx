@@ -72,7 +72,7 @@ function MainPage() {
         <div className="swiper-wrapper">
           <div className="swiper-slide" onClick={MoveToProfile}>
             <div className="inner">
-              <img src={MybirthdayImg} />
+              <img src={MybirthdayImg} alt="my birthday img" />
               <div className="text-box">
                 <p>About My Life</p>
                 <div className="arrow"></div>
