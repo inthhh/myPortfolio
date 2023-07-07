@@ -9,6 +9,10 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import "swiper/css/effect-coverflow";
 import MybirthdayImg from "./imgs/mybirthday.jpeg";
+import StarbucksImg from "./imgs/startbucks.jpeg";
+import AirplaneImg from "./imgs/airplane.jpeg";
+import HackaImg from "./imgs/hacka.jpeg";
+import Pompom from "./imgs/pompom.jpeg";
 
 import Profile from "./SubPages/Profile";
 
@@ -19,6 +23,9 @@ function MainPage() {
 
   const MoveToProfile = () => {
     movePage("/profile");
+  };
+  const MoveToChannel = () => {
+    movePage("/channel");
   };
 
   const swiperContainerRef = useRef<HTMLDivElement>(null);
@@ -62,12 +69,8 @@ function MainPage() {
           <br /> 정수현입니다.
         </h1>
         <ul className="auto">
-          <li className="btnStart">
-            <i className="fas fa-play"></i>
-          </li>
-          <li className="btnStop">
-            <i className="fas fa-pause"></i>
-          </li>
+          <li className="btnStart">{/* <i className="fas fa-play"></i> */}</li>
+          <li className="btnStop">{/* <i className="fas fa-pause"></i> */}</li>
         </ul>
         <div className="swiper-wrapper">
           <div className="swiper-slide" onClick={MoveToProfile}>
@@ -80,28 +83,34 @@ function MainPage() {
               </div>
             </div>
           </div>
-          <div className="swiper-slide">
+          <div className="swiper-slide" onClick={MoveToChannel}>
             <div className="inner">
-              <h1>2</h1>
-              <p>About My Life 2</p>
+              <img src={Pompom} alt="pompom img" />
+              <div className="text-box">
+                <p>My Channel</p>
+                <div className="arrow"></div>
+                <p style={{ fontSize: "14px", marginTop: "14px" }}>더보기</p>
+              </div>
             </div>
           </div>
           <div className="swiper-slide">
             <div className="inner">
-              <h1>3</h1>
-              <p>About My Life 3</p>
+              <img src={AirplaneImg} alt="airplane img" />
+              <div className="text-box">
+                <p>Main Projects</p>
+                <div className="arrow"></div>
+                <p style={{ fontSize: "14px", marginTop: "14px" }}>더보기</p>
+              </div>
             </div>
           </div>
           <div className="swiper-slide">
             <div className="inner">
-              <h1>4</h1>
-              <p>About My Life 4</p>
-            </div>
-          </div>
-          <div className="swiper-slide">
-            <div className="inner">
-              <h1>5</h1>
-              <p>About My Life 5</p>
+              <img src={HackaImg} alt="my hackathon img" />
+              <div className="text-box">
+                <p>Other Experiences</p>
+                <div className="arrow"></div>
+                <p style={{ fontSize: "14px", marginTop: "14px" }}>더보기</p>
+              </div>
             </div>
           </div>
         </div>

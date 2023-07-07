@@ -8,11 +8,7 @@ import Fade from "../Fade";
 import myroadmap from "./subimgs/myroadmap.png";
 
 function Profile() {
-  const [showComponent, setShowComponent] = useState(false);
-
-  const handleShowComponent = () => {
-    setShowComponent(true);
-  };
+  
   return (
     <div>
       <div className="sub-wrap">
