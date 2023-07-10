@@ -88,6 +88,7 @@ a {
 .wrap .swiper-wrapper .swiper-slide-prev,
 .wrap .swiper-wrapper .swiper-slide-next {
   opacity: 0.6;
+  pointer-events: none;
 }
 
 .swiper-wrapper {
@@ -102,6 +103,7 @@ a {
   position: relative;
   margin-top: 190px;
   background: #fff;
+  opacity: 0.6;
 }
 .swiper-wrapper .swiper-slide .inner {
   width: 100%;
@@ -110,7 +112,7 @@ a {
   padding: 30px;
   box-sizing: border-box;
   background-color: #fff;
-  /* opacity: 1; */
+  opacity: 1;
   transition: 1s;
   display: flex;
   align-items: center; /* 수직 방향 중앙 정렬 */
@@ -182,9 +184,9 @@ a {
   color: #fff;
 }
 
-.swiper-wrapper .swiper-slide:hover .inner {
+.swiper-wrapper .swiper-slide-active:hover .inner {
   transform: scale(0.9);
 }
-.swiper-wrapper .swiper-slide:hover {
+.swiper-wrapper .swiper-slide-active:hover {
   cursor: pointer;
 }
