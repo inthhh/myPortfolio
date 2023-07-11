@@ -27,6 +27,12 @@ function MainPage() {
   const MoveToChannel = () => {
     movePage("/channel");
   };
+  const MoveToMainPj = () => {
+    movePage("/main-projects");
+  };
+  const MoveToOthers = () => {
+    movePage("/other-experiences");
+  };
 
   const swiperContainerRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
@@ -93,7 +99,7 @@ function MainPage() {
               </div>
             </div>
           </div>
-          <div className="swiper-slide">
+          <div className="swiper-slide" onClick={MoveToMainPj}>
             <div className="inner">
               <img src={AirplaneImg} alt="airplane img" />
               <div className="text-box">
@@ -103,7 +109,7 @@ function MainPage() {
               </div>
             </div>
           </div>
-          <div className="swiper-slide">
+          <div className="swiper-slide" onClick={MoveToOthers}>
             <div className="inner">
               <img src={HackaImg} alt="my hackathon img" />
               <div className="text-box">
