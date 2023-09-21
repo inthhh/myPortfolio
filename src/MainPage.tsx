@@ -72,7 +72,7 @@ function MainPage() {
         <h1>
           안녕하세요! 😊
           <br /> 디자인을 사랑하는 <span>프론트엔드 개발자 지망생</span>
-          <br /> 정수현입니다.
+          <br /> OOO입니다.
         </h1>
         <ul className="auto">
           <li className="btnStart">{/* <i className="fas fa-play"></i> */}</li>

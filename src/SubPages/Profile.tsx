@@ -8,7 +8,6 @@ import Fade from "../Fade";
 import myroadmap from "./subimgs/myroadmap.png";
 
 function Profile() {
-  
   return (
     <div>
       <div className="sub-wrap">
@@ -22,15 +21,15 @@ function Profile() {
               <img src={LoveCat} alt="lovecat"></img>
               <div className="contents">
                 <br />
-                <p>이름 : 정수현 (Zoe)</p>
-                <p>생년월일 : 2001/06/20</p>
+                <p>이름 : OOO</p>
+                <p>생년월일 : OOOO/OO/OO</p>
                 <p>한국항공대학교 소프트웨어학과 4학년 재학</p>
                 <br />
                 <p>
                   <span>Contact</span>
                 </p>
-                <p>📧 Email : glass005533@gmail.com</p>
-                <p>📞 Phone : 010.6631.7911</p>
+                <p>📧 Email : OOO</p>
+                <p>📞 Phone : OOO</p>
               </div>
             </div>
           </div>
